@@ -14,10 +14,10 @@ I started simple, just printing a character (char), when it was working I starte
 
 ## Special thanks
 
-To <a href="https://github.com/paulahemsi">Paula Hemsi</a>, who wrote <a href="/paulahemsi/ft_printf/blob/main/tests/understanding_printf_flags.c">this little program</a> and helped to understand flags. Also for her time to help me debbug my code. ;)
+To <a href="https://github.com/paulahemsi">Paula Hemsi</a>, who wrote <a href="https://github.com/paulahemsi/ft_printf/blob/main/tests/understanding_printf_flags.c">this little program</a> and helped to understand flags. Also for her time to help me debbug my code. ;)
 
 ## Tests
-Use <a href="/Users/tucapulcinelli/42SP/git_bkp/Projetos/03_ft_printf/script_printf.txt">this scripts</a> to help your tests
+Use <a href="https://github.com/Tucapulcinelli/ft_printf/blob/main/script_printf.txt">this scripts</a> to help your tests
 
 
 Tests used are:
