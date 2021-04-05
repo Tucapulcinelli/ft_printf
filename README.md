@@ -10,7 +10,7 @@ When I first look at pdf, I was so happy that I finally could stop use write in 
 
 It was only when I started to understand the flags that it became real and I realized that I should start filtering results.
 
-I started simple, just printing a character (char), when it was working I started handle % specifiers. Code is commented, so I hope help you to understand better.
+I started simple, just printing a character (char), when it was working I started handle % specifiers. Hope help you to understand better.
 
 ## Special thanks
 
