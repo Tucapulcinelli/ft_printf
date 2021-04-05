@@ -23,6 +23,9 @@ Use <a href="https://github.com/Tucapulcinelli/ft_printf/blob/main/script_printf
 Tests used are:
 
 https://github.com/cacharle/ft_printf_test.git
+
 https://github.com/gavinfielder/pft.git
+
 https://github.com/Mazoise/42TESTERS-PRINTF
+
 https://github.com/Tripouille/printfTester
