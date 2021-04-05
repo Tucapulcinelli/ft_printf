@@ -6,20 +6,20 @@
 /*   By: telias-p <telias-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 14:12:56 by telias-p          #+#    #+#             */
-/*   Updated: 2021/03/18 20:32:09 by telias-p         ###   ########.fr       */
+/*   Updated: 2021/04/05 19:48:26 by telias-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-t_flags	ft_minus(t_flags flags) // atribui valor na struct
+t_flags	ft_minus(t_flags flags)
 {
 	flags.minus = 1;
 	flags.zero = 0;
 	return (flags);
 }
 
-t_flags	ft_digit(char c, t_flags flags) // atribui valor na struct
+t_flags	ft_digit(char c, t_flags flags)
 {
 	if (flags.star == 1)
 		flags.width = 0;
@@ -27,7 +27,7 @@ t_flags	ft_digit(char c, t_flags flags) // atribui valor na struct
 	return (flags);
 }
 
-t_flags	ft_width(va_list args, t_flags flags) // atribui valor na struct
+t_flags	ft_width(va_list args, t_flags flags)
 {
 	flags.star = 1;
 	flags.width = va_arg(args, int);
@@ -40,7 +40,7 @@ t_flags	ft_width(va_list args, t_flags flags) // atribui valor na struct
 	return (flags);
 }
 
-int		ft_dot(const char *str, int start, t_flags *flags, va_list args) // atribui valor na struct
+int		ft_dot(const char *str, int start, t_flags *flags, va_list args)
 {
 	int i;
 
@@ -63,7 +63,7 @@ int		ft_dot(const char *str, int start, t_flags *flags, va_list args) // atribui
 	return (i);
 }
 
-int	ft_handle_width(int width, int minus, int zero) // atribui valor na struct
+int	ft_handle_width(int width, int minus, int zero)
 {
 	int count;
 

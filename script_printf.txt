@@ -1,4 +1,4 @@
-Clone your repo
+Clone your repo, do not enter it, then do the following:
 
 git clone https://github.com/cacharle/ft_printf_test.git
 

@@ -6,15 +6,11 @@
 /*   By: telias-p <telias-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 14:13:18 by telias-p          #+#    #+#             */
-/*   Updated: 2021/03/18 20:32:09 by telias-p         ###   ########.fr       */
+/*   Updated: 2021/04/05 19:49:04 by telias-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-/*
-** responsáveis por tratar os inteiros e suas flags
-*/
 
 static int	ft_get_int(char *str, int num, t_flags flags)
 {

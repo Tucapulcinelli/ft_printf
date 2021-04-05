@@ -6,20 +6,20 @@
 /*   By: telias-p <telias-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/18 15:54:19 by telias-p          #+#    #+#             */
-/*   Updated: 2021/03/18 20:41:15 by telias-p         ###   ########.fr       */
+/*   Updated: 2021/04/05 19:40:48 by telias-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_tolower(int c) // converte maiuscula em minuscula
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		c = c + ('a' - 'A');
 	return (c);
 }
 
-char	*ft_unsigned_itoa(unsigned int n) // conversão de unsigned em string
+char	*ft_unsigned_itoa(unsigned int n)
 {
 	char	*str;
 	long	nbr;
@@ -48,7 +48,7 @@ char	*ft_unsigned_itoa(unsigned int n) // conversão de unsigned em string
 	return (str);
 }
 
-char	*ft_strdup(const char *s1) // duplica string e retorna ponteiro
+char	*ft_strdup(const char *s1)
 {
 	char	*ptr;
 	int		len;

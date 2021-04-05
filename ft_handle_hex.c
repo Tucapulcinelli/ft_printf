@@ -6,15 +6,11 @@
 /*   By: telias-p <telias-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 14:13:11 by telias-p          #+#    #+#             */
-/*   Updated: 2021/03/18 20:50:16 by telias-p         ###   ########.fr       */
+/*   Updated: 2021/04/05 19:48:45 by telias-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-/*
-** responsáveis por tratar os hexadecimais e suas flags
-*/
 
 static int	ft_get_hex(char *hex, t_flags flags)
 {
@@ -57,7 +53,7 @@ int			ft_handle_hex(unsigned int number, int lowercase, t_flags flags)
 	char	*hex;
 	int		count;
 
-	number = (unsigned int)(4294967295 + 1 + number); // valor max para um unsigned int 32-bit
+	number = (unsigned int)(4294967295 + 1 + number);
 	count = 0;
 	if (flags.dot == 0 && number == 0)
 	{
@@ -72,7 +68,7 @@ int			ft_handle_hex(unsigned int number, int lowercase, t_flags flags)
 	return (count);
 }
 
-char	*ft_str_tolower(char *str) // converte a string de Hexa maiuscula pra mi
+char	*ft_str_tolower(char *str)
 {
 	int i;
 

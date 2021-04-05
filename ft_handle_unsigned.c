@@ -6,15 +6,11 @@
 /*   By: telias-p <telias-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 14:13:46 by telias-p          #+#    #+#             */
-/*   Updated: 2021/03/18 20:32:09 by telias-p         ###   ########.fr       */
+/*   Updated: 2021/04/05 19:49:30 by telias-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-/*
-** responsáveis por tratar os unsigned e suas flags
-*/
 
 static int	ft_get_unsigned(char *u_num, t_flags flags)
 {

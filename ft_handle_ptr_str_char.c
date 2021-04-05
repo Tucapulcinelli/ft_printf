@@ -6,15 +6,11 @@
 /*   By: telias-p <telias-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 14:13:33 by telias-p          #+#    #+#             */
-/*   Updated: 2021/03/18 20:32:09 by telias-p         ###   ########.fr       */
+/*   Updated: 2021/04/05 19:49:24 by telias-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-/*
-** responsáveis por tratar os ponteiros e suas flags
-*/
 
 static int	ft_get_pointer(char *pointer, t_flags flags)
 {
@@ -61,10 +57,6 @@ int			ft_handle_pointer(unsigned long long num, t_flags flags)
 	return (count);
 }
 
-/*
-** responsáveis por tratar as strings e suas flags
-*/
-
 static int	ft_get_string(char *str, t_flags flags)
 {
 	int count;
@@ -94,15 +86,11 @@ int			ft_handle_string(char *str, t_flags flags)
 	if (flags.dot >= 0)
 		count += ft_handle_width(flags.width, flags.dot, 0);
 	else
-		count += ft_handle_width(flags.width, ft_strlen(str), 0);
+		count += ft_handle_width(flags.width, ft_strlen(str), flags.zero);
 	if (flags.minus == 0)
 		count += ft_get_string(str, flags);
 	return (count);
 }
-
-/*
-** responsáveis por tratar cada caracter e suas flags
-*/
 
 int	ft_handle_char(char c, t_flags flags)
 {

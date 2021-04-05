@@ -6,16 +6,12 @@
 /*   By: telias-p <telias-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 14:14:22 by telias-p          #+#    #+#             */
-/*   Updated: 2021/03/18 20:32:09 by telias-p         ###   ########.fr       */
+/*   Updated: 2021/04/05 19:50:29 by telias-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdio.h>
-
-/*
-** reseta a struct
-*/
 
 static t_flags			ft_reset_flags(void)
 {
@@ -29,10 +25,6 @@ static t_flags			ft_reset_flags(void)
 	flags.dot = -1;
 	return (flags);
 }
-
-/*
-** faz a checagem das flags e distribui pra função especifica tratar.
-*/
 
 static int				ft_flag_options(const char *str, int i,
 t_flags *flags, va_list args)
@@ -61,11 +53,6 @@ t_flags *flags, va_list args)
 	return (i);
 }
 
-/*
-** Inicia a struct, acha o porcento, chama funcao que classifica as flags
-** imprime direto se não acha porcento.
-*/
-
 static int				ft_find_percent(const char *str, va_list args)
 {
 	int		i;
@@ -77,14 +64,14 @@ static int				ft_find_percent(const char *str, va_list args)
 	while (!0)
 	{
 		flags = ft_reset_flags();
-		if (!str[i]) // condição de start
+		if (!str[i])
 			break ;
 		else if (str[i] != '%')
-			count += ft_putchar(str[i]); // imprime dirteo se não acha o porcento
-		else if (str[i] == '%' && str[i + 1])// verifica o caractere seguinte ao porcento
+			count += ft_putchar(str[i]);
+		else if (str[i] == '%' && str[i + 1])
 		{
-			i = ft_flag_options(str, ++i, &flags, args);// verifica as flags
-			if (ft_isspec(str[i])) // verifica os specificadores
+			i = ft_flag_options(str, ++i, &flags, args);
+			if (ft_isspec(str[i]))
 				count += ft_handle((char)flags.type, flags, args);
 			else if (str[i])
 				count += ft_putchar(str[i]);
@@ -93,10 +80,6 @@ static int				ft_find_percent(const char *str, va_list args)
 	}
 	return (count);
 }
-
-/*
-** carrega os argumentos e passa pra função find_percent, libera a mem após final
-*/
 
 int						ft_printf(const char *format, ...)
 {

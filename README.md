@@ -1,36 +1,28 @@
-Introduction
+# ft_printf
+
+## Introduction
 
 The versatility of the printf function in C represents a great exercise in programming for us. This project is of moderate difficulty. It will enable you to discover variadic functions in C. The key to a successful ft_printf is a well-structured and good extensible code.
 
-Tests
+## Inside my head
 
-Clone your repo, do not enter it, then do the following:
+When I first look at pdf, I was so happy that I finally could stop use write in my functions, that I didn't realize the real size of this function and all its features.
 
-git clone https://github.com/cacharle/ft_printf_test.git
+It was only when I started to understand the flags that it became real and I realized that I should start filtering results.
 
-cd ft_printf_test
-make run
-make fclean
-cd ..
-rm -rf ft_printf_test
+I started simple, just printing a character (char), when it was working I started handle % specifiers. Code is commented, so I hope help you to understand better.
 
-cd ft_printf
-git clone https://github.com/gavinfielder/pft.git pft_2019 && echo "pft_2019/" >> .gitignore && cd pft_2019 && rm unit_tests.c && rm options-config.ini &&
-git clone https://github.com/cclaude42/PFT_2019.git temp && cp temp/unit_tests.c . && cp temp/options-config.ini . && rm -rf temp
-make && ./test
-cd ..
-make fclean
-rm -rf .gitignore
-rm -rf pft_2019
+## Special thanks
 
-git clone https://github.com/Mazoise/42TESTERS-PRINTF
-cd 42TESTERS-PRINTF
-bashruntest.sh
-cd ..
-rm -rf 42TESTERS-PRINTF
+To <a href="https://github.com/paulahemsi">Paula Hemsi</a>, who wrote <a href="/paulahemsi/ft_printf/blob/main/tests/understanding_printf_flags.c">this little program</a> and helped to understand flags. Also for her time to help me debbug my code. ;)
 
-git clone https://github.com/Tripouille/printfTester
-cd printfTester
-make m && make fclean
-cd ..
-rm -rf printfTester
+## Tests
+Use <a href="/Users/tucapulcinelli/42SP/git_bkp/Projetos/03_ft_printf/script_printf.txt">this scripts</a> to help your tests
+
+
+Tests used are:
+
+https://github.com/cacharle/ft_printf_test.git
+https://github.com/gavinfielder/pft.git
+https://github.com/Mazoise/42TESTERS-PRINTF
+https://github.com/Tripouille/printfTester
